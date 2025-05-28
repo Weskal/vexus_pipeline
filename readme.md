@@ -1,18 +1,20 @@
-# Pipeline Automatizado de Dados com Airflow, Python e SQL Server
+# Vexus Data Pipeline
+Automated Data Pipeline with Airflow, Python, and SQL Server
 
-## Descrição
 
-Este projeto implementa um pipeline automatizado para geração, armazenamento e ingestão de dados simulados de pedidos de vendas de uma loja de roupas ficticia chamada Vexus. Utiliza Python para a criação dos dados e envio dos dados para o banco, Apache Airflow para orquestração e SQL Server para armazenamento e consulta.
+## Description
 
-## Funcionalidades
+This project implements an automated pipeline for generating, ingesting, and storing simulated sales order data for a fictitious clothing store called Vexus. It uses Python to create the data and send it to the database, Apache Airflow for orchestration, and SQL Server for storage and querying.
 
-- Geração diária de dados simulados com base em produtos reais do banco SQL Server.
-- Armazenamento dos dados em arquivos CSV organizados por data.
-- Ingestão automática dos arquivos CSV para a base SQL Server.
-- Validação de dados para evitar duplicidade e garantir integridade.
-- Pipeline orquestrada e agendada via Apache Airflow.
+## Features
 
-## Tecnologias Utilizadas
+- Daily generation of simulated data based on real products from the SQL Server database.
+- Storage of data in CSV files organized by date.
+- Automatic ingestion of CSV files into the SQL Server database.
+- Data validation to avoid duplication and ensure integrity.
+- Pipeline orchestrated and scheduled via Apache Airflow.
+
+## Technologies Used
 
 - Python
 - Apache Airflow
@@ -20,7 +22,7 @@ Este projeto implementa um pipeline automatizado para geração, armazenamento e
 - pandas
 - pyodbc
 
-## Estrutura do Projeto
+## Project Structure
 - scripts
   - `__init__.py`
   - `db_utils.py`
@@ -33,45 +35,41 @@ Este projeto implementa um pipeline automatizado para geração, armazenamento e
 - readme.md
 - requirements.txt
 
+## How to Run
 
-## Como Executar
-
-### 1. Configure o arquivo `.env` com as credenciais do banco de dados e insira as credenciais do banco de dados:
+### 1. Create and configure the `.env` file with your database credentials:
 
 ```env
-DB_SERVER=seu_servidor
-DB_DATABASE=seu_banco
-DB_USER=seu_usuario
-DB_PASSWORD=sua_senha
+DB_SERVER=your_server
+DB_DATABASE=your_database
+DB_USER=your_user
+DB_PASSWORD=your_password 
 ```
-### 2. Dentro da sua pasta do projeto, crie e ative um ambiente virtual para o Python:
-```venv python -m venv venv
+
+### 2. Inside your project folder, create and activate a Python virtual environment:
+```bash
+python -m venv venv
 source venv/bin/activate       # Linux/Mac
 .\venv\Scripts\activate        # Windows
 ```
 
-### 3. Instale dependências
-```req
-pip install -r requirements.txt 
+### 3. Install dependencies:
+```bash
+pip install -r requirements.txt
 ```
-
-### 4. Dentro do ambiente virtual, execute o airflow
-```airflow
+### 4. Inside the virtual environment, run Airflow:
+```bash
 airflow standalone
 ```
 
-## 🚀 Próximos passos
+## 🚀 Next Steps
+🔁 Integration with Jenkins for automated deployment (CI/CD)
 
-🔁 Integração com Jenkins para deploy automático (CI/CD)
+✅ Ensure idempotency in executions
 
-✅ Garantir idempotência nas execuções
+🔍 Implement data quality and consistency checks
 
-🔍 Implementar verificações de qualidade e consistência dos dados
-
-📈 Monitoramento e alertas para falhas no pipeline
-
-
-
+📈 Monitoring and alerting for pipeline failures
 
 --------------------
 --------------------
@@ -79,15 +77,16 @@ airflow standalone
 --------------------
 --------------------
 --------------------
- 
-## 📢 Contribuição
-Sinta-se à vontade para abrir issues ou fazer PRs com melhorias, ideias ou correções.
 
-#### 🧑‍💻 Autor
-Desenvolvido por __Gabriel Paliato__
+## 📢 Contribution
+Feel free to open issues or submit PRs with improvements, ideas, or fixes.
 
-# 📲 Conecte-se comigo no LinkedIn
-Estou sempre aberto a trocar experiências, compartilhar aprendizados e explorar novas oportunidades na área de Engenharia de Dados, Infraestrutura e DevOps.
+## 🧑‍💻 Author
+Developed by __Gabriel Paliato__
 
-Vamos nos conectar!
+# 📲 Connect with me on LinkedIn
+I am always open to exchanging experiences, sharing knowledge, and exploring new opportunities in Data Engineering, Infrastructure, and DevOps.
+
+Let's connect!
 https://www.linkedin.com/in/gabriel-paliato-49467b211/
+
