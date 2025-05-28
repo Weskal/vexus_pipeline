@@ -72,11 +72,6 @@ airflow standalone
 📈 Monitoring and alerting for pipeline failures
 
 --------------------
---------------------
---------------------
---------------------
---------------------
---------------------
 
 ## 📢 Contribution
 Feel free to open issues or submit PRs with improvements, ideas, or fixes.
