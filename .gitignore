@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+venv/
+.env
+logs/
+tmp/
+airflow.db
+airflow.cfg
+raw_data/
+.vscode/
+standalone_admin_password.txt
+webserver_config.py
+
