@@ -38,7 +38,7 @@ def ingestions_csv():
                 ordem = row['ordem_venda']
                 produto = row['id_produto']
 
-                # Verifica se a combinação ORDEM_VENDA + ID_PRODUTO já existe
+                # Verify if the combination of ORDEM_VENDA + ID_PRODUTO already exists
                 cursor.execute("""
                     SELECT 1 FROM SALESORDER 
                     WHERE ORDEM_VENDA = ? AND ID_PRODUTO = ?
@@ -48,7 +48,7 @@ def ingestions_csv():
                     
                     continue
 
-                # Inserção segura com transação
+                # Secure insertion with transaction
                 cursor.execute("""
                     INSERT INTO SALESORDER (ORDEM_VENDA, ID_PRODUTO, QTD, PRECO_TOTAL_PRODUTO, PRECO_FINAL, DATA_PEDIDO)
                     VALUES (?, ?, ?, ?, ?, ?)
@@ -62,5 +62,3 @@ def ingestions_csv():
             conn.rollback()
 
     conn.close()
-
-#ingestions_csv()
